@@ -31,8 +31,7 @@ class InitialMainFragment : Fragment() {
         val binding = FragmentInitialMainBinding.inflate(inflater, container, false)
 
         binding.mainAddPlanBtn.setOnClickListener{
-            val intent = Intent(context, com.example.plan.AddActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(context, com.example.plan.PlanActivity::class.java))
         }
 
         return binding.root

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InitialMainFragment"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="228dp"
+            android:gravity="center"
+            android:text="아직 계획이 없어요!"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="함께 공부를 시작해볼까요?"
+            android:textSize="12sp"/>
+
+        <Button
+            android:id="@+id/main_addPlanBtn"
+            android:layout_width="168dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="44dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/skyblue"
+            android:text="계획 추가하기"
+            android:textSize="17sp"/>
+    </LinearLayout>
+</FrameLayout>

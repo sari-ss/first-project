@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">IntelliPlanner</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="months_array">
+        <item>1월</item>
+        <item>2월</item>
+        <item>3월</item>
+        <item>4월</item>
+        <item>5월</item>
+        <item>6월</item>
+        <item>7월</item>
+        <item>8월</item>
+        <item>9월</item>
+        <item>10월</item>
+        <item>11월</item>
+        <item>12월</item>
+    </string-array>
+    <string-array name="week_array">
+        <item>1주차</item>
+        <item>2주차</item>
+        <item>3주차</item>
+        <item>4주차</item>
+    </string-array>
+    <string name="menu_addPlan">계획 추가</string>
+    <string name="menu_managePlan">계획 관리</string>
+    <string name="menu_mypage">마이페이지</string>
+</resources>

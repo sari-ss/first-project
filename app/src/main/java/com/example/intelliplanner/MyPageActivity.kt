@@ -20,6 +20,10 @@ class MyPageActivity : AppCompatActivity(), CustomDialogInterface {
             }
         }
 
+        binding.myPageChangePW.setOnClickListener {
+
+        }
+
         binding.myPageLogout.setOnClickListener {
             logout()
         }

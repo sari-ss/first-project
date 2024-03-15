@@ -13,9 +13,12 @@
         android:theme="@style/Theme.IntelliPlanner"
         tools:targetApi="31">
         <activity
+            android:name=".ChangePWActivity"
+            android:exported="false" />
+        <activity
             android:name=".MyPageActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

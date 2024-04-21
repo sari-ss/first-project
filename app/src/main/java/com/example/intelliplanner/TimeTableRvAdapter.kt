@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.intelliplanner.databinding.TimetableItemBinding
 
-class TimeTableRvAdapter(val timeList: ArrayList<Int>) : RecyclerView.Adapter<TimeTableRvAdapter.Holder>() {
+class TimeTableRvAdapter(val timeList: Array<Int>) : RecyclerView.Adapter<TimeTableRvAdapter.Holder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val binding = TimetableItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return Holder(binding)

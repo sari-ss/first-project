@@ -3,7 +3,13 @@
     <style name="Base.Theme.IntelliPlanner" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/skyblue</item>
+        <item name="android:timePickerStyle">@style/TimePickerStyle</item>
     </style>
 
     <style name="Theme.IntelliPlanner" parent="Base.Theme.IntelliPlanner" />
+
+    <style name="TimePickerStyle" parent="Widget.Material3.MaterialTimePicker">
+        <item name="android:timePickerMode">spinner</item>
+    </style>
 </resources>

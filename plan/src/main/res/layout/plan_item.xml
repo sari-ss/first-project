@@ -9,10 +9,11 @@
 
     <TextView
         android:id="@+id/planRv_subjectName"
-        android:layout_width="wrap_content"
+        android:layout_width="70dp"
         android:layout_height="match_parent"
         android:layout_marginStart="30dp"
         android:gravity="center"
+        android:maxLength="6"
         android:padding="10dp"
         android:text="과목명"
         android:textSize="16sp" />
@@ -21,7 +22,7 @@
         android:id="@+id/planRV_editBtn"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_marginStart="207dp"
+        android:layout_marginStart="170dp"
         android:layout_weight="1"
         android:backgroundTint="#00FFFFFF"
         android:padding="10dp"
@@ -31,8 +32,9 @@
         android:id="@+id/planRv_deleteBtn"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_marginStart="20dp"
-        android:layout_weight="1"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight="5"
         android:padding="10dp"
         android:background="#00FFFFFF"
         android:text="ㅡ"

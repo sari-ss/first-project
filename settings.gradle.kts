@@ -16,4 +16,3 @@ dependencyResolutionManagement {
 rootProject.name = "IntelliPlanner"
 include(":app")
 include(":plan")
-include(":start-page")

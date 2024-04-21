@@ -6,24 +6,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.example.intelliplanner.databinding.FragmentInitialMainBinding
+import com.example.plan.AddPlanActivity
+import com.example.plan.PlanNameDialog
+import com.example.plan.PlanNameDialogInterface
+import com.example.plan.PlanNameViewModel
 
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+const val PLAN_NAME = "plan_name"
 
-
-class InitialMainFragment : Fragment() {
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+class InitialMainFragment : Fragment(), PlanNameDialogInterface {
+    private val viewModel: PlanNameViewModel by lazy {
+        ViewModelProvider(requireActivity()).get(PlanNameViewModel::class.java)
     }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,20 +26,16 @@ class InitialMainFragment : Fragment() {
         val binding = FragmentInitialMainBinding.inflate(inflater, container, false)
 
         binding.mainAddPlanBtn.setOnClickListener{
-            startActivity(Intent(context, com.example.plan.PlanActivity::class.java))
+            val dialog = PlanNameDialog(this@InitialMainFragment)
+            requireActivity().let { dialog.show(it.supportFragmentManager, "PlanNameDialog") }
         }
 
         return binding.root
     }
 
-    companion object {
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            InitialMainFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onBtnClicked(planName: String) {
+        val intent = Intent(requireActivity(), AddPlanActivity::class.java)
+        intent.putExtra(PLAN_NAME, planName)
+        startActivity(intent)
     }
 }

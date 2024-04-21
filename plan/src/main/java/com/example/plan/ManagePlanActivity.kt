@@ -14,6 +14,13 @@ class ManagePlanActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        binding.planManageToolbar.apply {
+            setNavigationIcon(R.drawable.ic_back)
+            setNavigationOnClickListener {
+                finish()
+            }
+        }
+
         val dateObserver = object: Observer<String> {
             override fun onChanged(value: String) {
                 dateList.add(value)

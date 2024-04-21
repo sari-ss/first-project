@@ -23,18 +23,14 @@ class WorkRvAdapter(val context: AddActivity, val workList: ArrayList<String>) :
     }
 
     inner class Holder(val binding: WorkItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        var position: Int? = null
-        init {
-            binding.workRvDeleteBtn.setOnClickListener {
-                context.deleteWork(position!!)
-            }
-        }
-
         fun setData(data: String, position: Int) {
             binding.workRvNum.text = "${position + 1}"
             binding.workRvEditText.setText(data)
             binding.workRvEditText.addTextChangedListener(MemoTextWatcher(position))
-            this.position = position
+
+            binding.workRvDeleteBtn.setOnClickListener {
+                context.deleteWork(position)
+            }
         }
     }
 

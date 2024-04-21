@@ -69,7 +69,7 @@ class AddActivity : AppCompatActivity(), ConfirmDialogInterface {
         //할 일 추가 버튼 click
         binding.addWorkBtn.setOnClickListener {
             workList.add("")
-            binding.addWorkRv.adapter!!.notifyItemInserted(workList.size)
+            binding.addWorkRv.adapter!!.notifyDataSetChanged()
         }
 
         //AddPlanActivity에서 수정 버튼 클릭시 과목이름, 리스트에서 위치 받아옴
@@ -81,14 +81,14 @@ class AddActivity : AppCompatActivity(), ConfirmDialogInterface {
     }
 
     //시간 삭제 버튼 click
-    fun deleteTime(selected: Int) {
-        timeList.removeAt(selected)
+    fun deleteTime(position: Int) {
+        timeList.removeAt(position)
         timeRvAdapter?.notifyDataSetChanged()
     }
 
     //할 일 삭제 버튼 click
-    fun deleteWork(selected: Int) {
-        workList.removeAt(selected)
+    fun deleteWork(position: Int) {
+        workList.removeAt(position)
         workRvAdapter?.notifyDataSetChanged()
     }
 
